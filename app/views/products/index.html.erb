@@ -4,14 +4,16 @@
 
 <div class="row">
   <% @products.each do |product| %>
-    <div class="col-md-3">Product Name: <%= product.name %></div>
-    <div class="col-md-3">Description: <%= product.description %></div>
-    <div class="col-md-3">Available Colours: <%= product.colour %></div>
-    <div class="col-md-3"><%= image_tag(product.image_url, class: "img-responsive") %></div>
-    <!-- <div class="col-md-3"><%= link_to 'Show', product %></div> -->
-    <!-- <div class="col-md-3"><%= link_to 'Edit', edit_product_path(product) %></div> -->
-    <!-- <div class="col-md-3"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></div> -->
-    <br>
+    <div class="container">
+      <div class="col-md-3">Product Name: <%= product.name %></div>
+      <div class="col-md-3">Description: <%= product.description %></div>
+      <div class="col-md-3">Available Colours: <%= product.colour %></div>
+      <div class="col-md-3"><%= image_tag(product.image_url, class: "img-responsive") %></div>
+      <div class="col-md-3"><%= link_to 'Show', product %></div>
+      <div class="col-md-3"><%= link_to 'Edit', edit_product_path(product) %></div>
+      <div class="col-md-3"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      <br>
+    </div>
   <% end %>
 </div>
 
