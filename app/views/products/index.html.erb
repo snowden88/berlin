@@ -2,30 +2,17 @@
 
 <h1>Featured Bikes</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<div class="row">
+  <% @products.each do |product| %>
+    <div class="col-md-3">Product Name: <%= product.name %></div>
+    <div class="col-md-3">Description: <%= product.description %></div>
+    <div class="col-md-3">Available Colours: <%= product.colour %></div>
+    <div class="col-md-3"><%= image_tag(product.image_url, class: "img-responsive") %></div>
+    <!-- <div class="col-md-3"><%= link_to 'Show', product %></div> -->
+    <!-- <div class="col-md-3"><%= link_to 'Edit', edit_product_path(product) %></div> -->
+    <!-- <div class="col-md-3"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></div> -->
+    <br>
+  <% end %>
+</div>
 
 <%= link_to 'New Product', new_product_path %>

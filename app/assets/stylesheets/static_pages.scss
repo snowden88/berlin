@@ -13,16 +13,21 @@ body {
   color: #fff;
 }
 
-h1, h2, p,  {
+input, textarea {
+  background-color: #000;
+}
+
+h1, h2, p {
   text-align: center;
 }
 
-a {
-  color: #2f3841 !important;
-}
+// a {
+//   color: #2f3841 !important;
+// }
 
 .cursive-brand {
   font-family: 'Shadows Into Light', cursive;
+  color: #2f3841 !important;
 }
 
 .jumbotron {
