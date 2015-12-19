@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Berlin Bikes</title>
+  <title>Bike Berlin</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -30,7 +30,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
+                <li><a href="static_pages/index">Home</a></li>
                 <li><a href="/products">Products</a></li>
                 <li><a href="/static_pages/about">About</a></li>
                 <li><a href="/static_pages/contact">Contact</a></li>
@@ -40,7 +40,6 @@
         </nav>
         <div class="jumbotron">
           <h1>Bike Berlin</h1>
-          <h2>Your Source for Used Bikes in Berlin.</h2>
         </div>
 
     <%= yield %> <!-- embed Ruby page -->
