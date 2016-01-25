@@ -5,22 +5,22 @@
     <strong>Name:</strong>
     <%= @product.name %>
   </p>
-
+  <br>
   <p>
     <strong>Description:</strong>
     <%= @product.description %>
   </p>
-
+  <br>
   <p>
     <strong>Image:</strong>
     <%= image_tag(@product.image_url, class: "img-responsive") %>
   </p>
-
+  <br>
   <p>
     <strong>Colour:</strong>
     <%= @product.colour %>
   </p>
-
+  <br>
   <p>
     <strong>Price:</strong>
     $<%= @product.price %>
@@ -28,5 +28,5 @@
 
   <%= link_to 'Edit', edit_product_path(@product) %> |
   <%= link_to 'Back', products_path %>
-
+  <br>
 </div>
