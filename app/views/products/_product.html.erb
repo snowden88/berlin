@@ -1,5 +1,5 @@
 <div class="container product_box">
-  <div class="col-md-3"><strong>Model:</strong> <%= product.name %> <strong>Colour:</strong> <%= product.colour %> <strong>Description:</strong> <%= product.description %></div>
+  <div class="col-md-3"><strong>Model:</strong> <%= product.name %><br><strong>Colour:</strong> <%= product.colour %><br><strong>Description:</strong> <%= product.description %></div>
   <div class="col-md-3">$<%= product.price %></div>
   <div class="col-md-3"><%= image_tag(product.image_url, class: "img-responsive") %></div>
   <div class="col-md-3"><%= link_to 'Show', product %> <%= link_to 'Edit', edit_product_path(product) %> <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></div>
