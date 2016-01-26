@@ -25,6 +25,10 @@ h1, h2, p {
 //   color: #2f3841 !important;
 // }
 
+.logo_font {
+  font-family: 'Shadows Into Light', cursive;
+}
+
 .cursive-brand {
   font-family: 'Shadows Into Light', cursive;
   color: #2f3841 !important;
@@ -46,11 +50,4 @@ h1, h2, p {
   width: 100%;
   height: 60px;
   background-color: #fff;
-}
-
-.carousel_pic {
-  width: auto;
-  margin: 0 auto;
-  height: 400px;
-  max-height: 400px;
 }
