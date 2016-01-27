@@ -16,4 +16,10 @@
  .search-bar textarea, .search-bar input {
    background-color: #fff;
    color: #000;
+   float: right;
+   text-align: right;
+ }
+
+ .search-label {
+   color: #000;
  }
