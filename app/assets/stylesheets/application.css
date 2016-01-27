@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
- .search_nav {
+ .search-bar textarea, .search-bar input {
    background-color: #fff;
-   text-align: right;
  }

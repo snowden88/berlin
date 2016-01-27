@@ -28,18 +28,20 @@
               </button>
               <a class="navbar-brand cursive-brand" href="/">Bike Berlin</a>
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
+            <div id="navbar" class="navbar-collapse collapse search-bar">
               <ul class="nav navbar-nav">
                 <li><a href="<%= static_pages_index_path %>">Home</a></li>
                 <li><a href="<%= products_path %>">Products</a></li>
                 <li><a href="<%= static_pages_about_path %>">About</a></li>
                 <li><a href="<%= static_pages_contact_path %>">Contact</a></li>
+                <li>
+                  <%= form_tag("/products", method: "get") do %>
+                    <%= label_tag(:q) %>
+                    <%= text_field_tag(:q) %>
+                    <%= submit_tag("Search") %>
+                  <% end %>
+                </li>
               </ul>
-              <%= form_tag("/products", method: "get", class:"search_nav") do %>
-                <%= label_tag(:q) %>
-                <%= text_field_tag(:q) %>
-                <%= submit_tag("Search") %>
-              <% end %>
             </div><!--/.nav-collapse -->
           </div>
         </nav>
