@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ .search_nav {
+   background-color: #fff;
+   text-align: right;
+ }
