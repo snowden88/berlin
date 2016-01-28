@@ -20,12 +20,15 @@
   margin-right: 10px;
 }
 
-.form-control {
-  display: inline;
+#q {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
 }
 
 .search-label {
-  display: inline;
   color: #2f3841;
 }
 
