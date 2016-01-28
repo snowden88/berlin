@@ -20,7 +20,12 @@
   margin-right: 10px;
 }
 
+.form-control {
+  display: inline;
+}
+
 .search-label {
+  display: inline;
   color: #2f3841;
 }
 
