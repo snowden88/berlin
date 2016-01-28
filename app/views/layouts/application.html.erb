@@ -39,7 +39,7 @@
                 <%= form_tag("/products", method: "get") do %>
                   <%= label_tag(:q, "Search for:", class: "search-label") %>
                   <%= text_field_tag(:q) %>
-                  <%= submit_tag("Search") %>
+                  <%= submit_tag("Search", class: "btn btn-default") %>
                 <% end %>
             </div>
             </div><!--/.nav-collapse -->
