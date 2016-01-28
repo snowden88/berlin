@@ -35,13 +35,13 @@
                 <li><a href="<%= static_pages_about_path %>">About</a></li>
                 <li><a href="<%= static_pages_contact_path %>">Contact</a></li>
               </ul>
-              <div class="search-bar">
+              <div id="search-function">
                 <%= form_tag("/products", method: "get") do %>
-                  <%= label_tag(:q, "Search:", class:"search-label") %>
+                  <%= label_tag(:q, "Search for:", class: "search-label") %>
                   <%= text_field_tag(:q) %>
                   <%= submit_tag("Search") %>
-                  <% end %>
-              </div> <!-- end search-bar -->
+                <% end %>
+            </div>
             </div><!--/.nav-collapse -->
           </div>
         </nav>

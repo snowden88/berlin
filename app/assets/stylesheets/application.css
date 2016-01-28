@@ -13,13 +13,17 @@
  *= require_tree .
  *= require_self
  */
- .search-bar textarea, .search-bar input {
-   background-color: #fff;
-   color: #000;
-   float: right;
-   text-align: right;
- }
 
- .search-label {
-   color: #000;
- }
+#search-function {
+  float: right;
+  padding: 15px 15px;
+  margin-right: 10px;
+}
+
+.search-label {
+  color: #2f3841;
+}
+
+.options {
+  margin-top: 50px;
+}
