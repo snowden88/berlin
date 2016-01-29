@@ -34,6 +34,13 @@
                 <li><a href="<%= products_path %>">Products</a></li>
                 <li><a href="<%= static_pages_about_path %>">About</a></li>
                 <li><a href="<%= static_pages_contact_path %>">Contact</a></li>
+                <li>
+                  <% if user_signed_in? %>
+                    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                  <% else %>
+                    <%= link_to('Login', new_user_session_path) %>
+                  <% end %>
+                </li> <!-- Took creative liberty and added login to regular navigation bar -->
               </ul>
               <div id="search-function">
                 <%= form_tag("/products", method: "get") do %>
@@ -45,6 +52,10 @@
             </div><!--/.nav-collapse -->
           </div>
         </nav>
+        <div class="flash">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        </div> <!-- end flash -->
         <div class="jumbotron">
           <h1 class="logo_font">Bike Berlin</h1>
         </div>
