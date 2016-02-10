@@ -53,8 +53,9 @@
           </div>
         </nav>
         <div class="flash">
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
+          <% if alert %>
+          <p id="alert" class="alert alert-info"><%= alert %></p>
+          <% end %>
         </div> <!-- end flash -->
         <div class="jumbotron">
           <h1 class="logo_font">Bike Berlin</h1>
