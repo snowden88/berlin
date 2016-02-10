@@ -54,7 +54,11 @@
         </nav>
         <div class="flash">
           <% if notice %>
-          <p id="notice" class="notice notice-info"><%= notice %></p>
+            <span class="notice text-success"><%= notice %></span>
+          <% end %>
+
+          <% if alert %>
+            <span class="alert text-success"><%= alert %></span>
           <% end %>
         </div> <!-- end flash -->
         <div class="jumbotron">
