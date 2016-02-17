@@ -8,9 +8,19 @@
 
 .comment-form {
   float: left;
+  display: block;
+  padding-bottom: 50px;
 }
 
-.comments-sheet {
-  margin-top: 30px;
+.comment-display {
   display: block;
+  clear: both;
+}
+
+.comment-display p {
+  text-align: left;
+}
+
+.rated {
+  padding-bottom: 10px;
 }
