@@ -1,5 +1,5 @@
 <% if signed_in? %>
-  <div class="comment-form" align="left">
+  <div class="comment-form">
     <h4>Add a review:</h4>
     <%= form_for([@product, @product.comments.build]) do |f| %>
       <p>
