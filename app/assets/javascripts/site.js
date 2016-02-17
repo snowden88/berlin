@@ -1,3 +1,3 @@
 $(document).on('ready page:load', function(){
-    $('.rating').raty();
+    $('.rating').raty( {path: '/assets'});
 });
