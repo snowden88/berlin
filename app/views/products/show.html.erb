@@ -28,12 +28,14 @@
       <%= @product.colour %>
     </p>
   </div>
-  
+
 </div>
 
 <p>
   <%= image_tag(@product.image_url, class: "img-responsive") %>
 </p>
+
+<%= render "new_comment" %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
