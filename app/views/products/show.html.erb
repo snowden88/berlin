@@ -35,7 +35,13 @@
   <%= image_tag(@product.image_url, class: "img-responsive") %>
 </p>
 
+<br>
+
 <%= render "new_comment" %>
+
+<br>
+
+<%= render "comments" %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
