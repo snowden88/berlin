@@ -1,24 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Model:</strong>
-  <%= @product.name %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <p>
+      <strong>Model:</strong>
+      <%= @product.name %>
+    </p>
+  </div>
 
-<p>
-  <strong>Price:</strong>
-  $<%= @product.price %>
-</p>
+  <div class="col-xs-6 col-md-3">
+    <p>
+      <strong>Description:</strong>
+      <%= @product.description %>
+    </p>
+  </div>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
+  <div class="col-xs-6 col-md-3">
+    <p>
+      <strong>Price:</strong>
+      $<%= @product.price %>
+    </p>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <p>
+      <strong>Colour:</strong>
+      <%= @product.colour %>
+    </p>
+  </div>
+  
+</div>
 
 <p>
   <%= image_tag(@product.image_url, class: "img-responsive") %>
