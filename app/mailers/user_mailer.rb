@@ -19,4 +19,8 @@ class UserMailer < ApplicationMailer
         :body => @message).deliver_now
   end
 
+  def welcome_email(user)
+   @user = user
+   mail(:to => user.email, :subject => "Welcome to Berlin Bikes")
+  end
 end
