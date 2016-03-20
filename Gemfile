@@ -52,6 +52,11 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
+  #automate testing
+  gem 'guard-rspec', require: false
+  gem 'spork-rails'
+  gem 'guard-spork'
+
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
