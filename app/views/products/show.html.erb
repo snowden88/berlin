@@ -36,6 +36,11 @@
   <%= image_tag(@product.image_url, class: "img-responsive") %>
 </p>
 
+<p>
+<%= form_tag "/payments/create" do %>
+  <%= render partial: "shared/stripe_checkout_button" %>
+<% end %>
+</p>
 <p class="avg-rate">Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 <br>
 
