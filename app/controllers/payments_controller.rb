@@ -1,4 +1,6 @@
 class PaymentsController < ApplicationController
+  Stripe.api_key = "sk_test_IJexLsBP4k1VzjGP7Oj2XbO8"
+
   def create
     @product = Product.find(params[:product_id])
     @user = current_user
