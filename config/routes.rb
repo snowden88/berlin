@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   get 'static_pages/admin_login'
 
+  get 'payments/create'
+
   post 'static_pages/thank_you'
 
   post 'payments/create'
