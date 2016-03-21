@@ -7,7 +7,10 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :orders, only: [:index, :show, :create, :destroy]
+  resources :payments
 
+  post '/payments/create'
+  
   get 'static_pages/contact'
 
   get 'static_pages/about'
@@ -19,8 +22,6 @@ Rails.application.routes.draw do
   get 'static_pages/admin_login'
 
   post 'static_pages/thank_you'
-
-  post '/payments/create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
