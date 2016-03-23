@@ -55,6 +55,7 @@ group :development do
   gem 'web-console', '~> 2.0'
 
   #automate testing
+  gem 'guard'
   gem 'guard-rspec', require: false
   gem 'spork-rails'
   gem 'guard-spork'
