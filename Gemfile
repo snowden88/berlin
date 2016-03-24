@@ -60,6 +60,9 @@ group :development do
   gem 'spork-rails'
   gem 'guard-spork'
 
+  #security
+  gem 'brakeman', :require => false
+
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
