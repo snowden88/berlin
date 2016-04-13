@@ -5,9 +5,7 @@ $(document).on('ready page:load', function(){
       score: function() {
         return $(this).attr('data-score');
       }
-    });
-});
-
-$(document).on('ready page:load', function () {
-  $(.'img-zoom').elevateZoom();
+    $(.'img-zoom').elevateZoom();
+    
+  });
 });
