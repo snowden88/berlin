@@ -7,3 +7,7 @@ $(document).on('ready page:load', function(){
       }
     });
 });
+
+$(document).on('ready page:load', function () {
+  $(.'img-zoom').elevateZoom();
+});
