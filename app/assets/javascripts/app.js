@@ -5,7 +5,9 @@ $(document).on('ready page:load', function() {
 });
 
 app.controller('OrdersCtrl', ['$scope', function($scope){
-  $scope.name = "Michael";
-  // Here will be all code belonging to this controller
-
+  $scope.orders =[
+    {id: 1, total: 24, product_id: 1, user_id: 1},
+    {id: 2, total: 7, product_id: 2},
+    {id: 3, total: 42, product_id: 3, user_id: 2}
+  ];
 }]);
