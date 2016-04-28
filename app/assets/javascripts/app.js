@@ -10,4 +10,14 @@ app.controller('OrdersCtrl', ['$scope', function($scope){
     {id: 2, total: 7, product_id: 2},
     {id: 3, total: 42, product_id: 3, user_id: 2}
   ];
+  
+  $scope.addOrder = function(){
+    if(!$scope.newOrder.product_id || $scope.newOrder.total === ''){ return; }
+    $scope.orders.push($scope.newOrder);
+  }
+
+  $scope.deleteOrder = function(order){
+    $scope.orders.splice($scope.orders.indexOf(order), 1);
+  }
+
 }]);
