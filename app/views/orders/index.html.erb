@@ -10,7 +10,7 @@
       <option value="" disabled selected>Select a product</option>
       <option ng-repeat="product in products" value="{{product.id}}">{{product.name}}</option>
     </select>
-    
+
     <input type="submit" value="+" class="btn btn-success">
   </form>
 
@@ -29,8 +29,8 @@
   <strong>{{order.total | currency}}</strong>
 </td>
 <td>
-  {{order.product_id}}
-  <small ng-show="order.uder_id"><br>-{{order.user_id}}</small>
+  {{order.product.name}}
+  <small ng-show="order.user.email" class="text-muted"><br>-{{order.user.email}}</small>
 </td>
 <td>
   <button ng-click="deleteOrder(order)" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
