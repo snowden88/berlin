@@ -19,22 +19,25 @@
     <td>Order ID</td>
     <td>Total</td>
     <td>Product</td>
-    <td></td>
+    <td>User</td>
+    <td>Delete?</td>
   </thead>
-  <tr ng-repeat="order in orders | orderBy:'-id':reverse">
-    <td>
-  {{order.id}}
-</td>
-<td>
-  <strong>{{order.total | currency}}</strong>
-</td>
-<td>
+<tr ng-repeat="order in orders | orderBy:'-id':reverse">
+  <td>
+    {{order.id}}
+  </td>
+  <td>
+    <strong>{{order.total | currency}}</strong>
+  </td>
+  <td>
   {{order.product.name}}
+  </td>
+  <td>
   <small ng-show="order.user.email" class="text-muted"><br>-{{order.user.email}}</small>
-</td>
-<td>
+  </td>
+  <td>
   <button ng-click="deleteOrder(order)" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-</td>
+  </td>
 </tr>
 </table>
 </div>
