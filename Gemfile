@@ -9,6 +9,8 @@ gem 'sqlite3'
 end
 #payment processing
 gem 'stripe'
+#memcaching
+gem 'dalli'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

@@ -2,8 +2,10 @@
 
 <h1>Featured Bikes</h1>
 
-<div class="row">
-<%= render @products %>
-</div>
+<% cache (cache_key_for_products) do %>
+  <div class="row">
+  <%= render @products %>
+  </div>
+<% end %>
 
 <%= link_to 'New Product', new_product_path %>

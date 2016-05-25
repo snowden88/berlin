@@ -1,41 +1,41 @@
 <p id="notice"><%= notice %></p>
 <p id="alert"><%= alert %></p>
 
+<% cache @product do %>
+  <div class="row">
+    <div class="col-xs-6 col-md-3">
+      <p>
+        <strong>Model:</strong>
+        <%= @product.name %>
+      </p>
+    </div>
 
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <p>
-      <strong>Model:</strong>
-      <%= @product.name %>
-    </p>
+    <div class="col-xs-6 col-md-3">
+      <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
+    </div>
+
+    <div class="col-xs-6 col-md-3">
+      <p>
+        <strong>Price:</strong>
+        $<%= @product.price %>
+      </p>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <p>
+        <strong>Colour:</strong>
+        <%= @product.colour %>
+      </p>
+    </div>
+
   </div>
 
-  <div class="col-xs-6 col-md-3">
-    <p>
-      <strong>Description:</strong>
-      <%= @product.description %>
-    </p>
-  </div>
-
-  <div class="col-xs-6 col-md-3">
-    <p>
-      <strong>Price:</strong>
-      $<%= @product.price %>
-    </p>
-  </div>
-  <div class="col-xs-6 col-md-3">
-    <p>
-      <strong>Colour:</strong>
-      <%= @product.colour %>
-    </p>
-  </div>
-
-</div>
-
-<p>
-  <%= image_tag(@product.image_url, width: "400px", class: "img-zoom", data_zoom_image: @product.image_url) %>
-</p>
-
+  <p>
+    <%= image_tag(@product.image_url, width: "400px", class: "img-zoom", data_zoom_image: @product.image_url) %>
+  </p>
+<% end %>
 <p>
   <%= form_tag "/payments/create" do %>
       <%= render partial: "shared/stripe_checkout_button" %>
