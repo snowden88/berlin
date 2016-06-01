@@ -24,9 +24,8 @@ class UserMailer < ApplicationMailer
    mail(:to => user.email, :subject => "Welcome to Berlin Bikes")
   end
 
-  def purchase_email(email, product)
-    mail(:from => 'msnowd01@gmail.com',
-    :to => email,
-    :subject => "Thank you for your order",)
+  def purchase_email(customer)
+    @customer = customer
+    mail(:to => @customer.email, :subject => "Payment Confirmation")
   end
 end
