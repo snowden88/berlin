@@ -6,6 +6,8 @@ def create
     @user = current_user
     # Create the charge on Stripe's servers - this will charge the user's card
     begin
+        customer = Stripe::Customer.create(
+        :email => params[:stripeEmail],)
         charge = Stripe::Charge.create(
             :amount => (@product.price*100).to_i, # amount in cents, again
             :currency => "usd",
@@ -15,6 +17,7 @@ def create
 
         if charge.paid
             Order.create(product_id: @product.id, user_id: @user, total: @product.price)
+            UserMailer.purchase_email(customer).deliver_now
         end
 
         flash[:success] = "Payment processed successfully"
